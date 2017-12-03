@@ -1,8 +1,8 @@
 # BMP280 Sensor Library
 
 03/12/2017 by João Barroca <joao.barroca@tecnico.ulisboa.pt>
-Based on Bosch Sensortec Datasheet and Adafruit algorithms for reading temperature and pressure.
 
+Based on Bosch Sensortec Datasheet and Adafruit algorithms for reading temperature and pressure.
 
 Copyright (C) 2017 João Barroca
 
