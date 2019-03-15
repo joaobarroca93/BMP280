@@ -224,7 +224,7 @@ void BMP280::setIIRcoeff(uint8_t filter) {
   reg_data &= 0xE3;
   reg_data |= (filter << 2);
 
-  if (filter != getPressureOverSampling() && !_rwError){
+  if (filter != getIIRcoeff() && !_rwError){
     write8(BMP280_CONFIG, reg_data);
   }
 }
