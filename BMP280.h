@@ -40,7 +40,7 @@ this program. If not, see <http://www.gnu.org/licenses/>.
 #define BMP280_DEFAULT_T_SB     0x00
 #define BMP280_DEFAULT_FILTER   0x07
 
-#define SEA_LEVEL_HPA           101325
+#define SEA_LEVEL_PA            101325
 
 /* Calibration Data Structure */
 typedef struct
@@ -59,12 +59,6 @@ typedef struct
   int16_t  dig_P8;
   int16_t  dig_P9;
 
-  uint8_t  dig_H1;
-  int16_t  dig_H2;
-  uint8_t  dig_H3;
-  int16_t  dig_H4;
-  int16_t  dig_H5;
-  int8_t   dig_H6;
 } bmp280_calib_data;
 
 class BMP280
@@ -93,10 +87,10 @@ public:
 
   float readTemperature(void);
   float readPressure(void);
-  float readAltitude(float seaLevel = SEA_LEVEL_HPA);
+  float readAltitude(float seaLevel = SEA_LEVEL_PA);
 
 private:
-  boolean _ready;
+  bool _ready;
   uint8_t _addr;
   uint8_t _rwError;
   int32_t t_fine;
